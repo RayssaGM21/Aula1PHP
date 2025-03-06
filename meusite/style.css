@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #FBFBFB;
+}
+
+.btn{
+    background-color: #f9a825;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;    
+}
+
+.btn:hover{
+    background-color: #ffbb4d;
+}
+
+
+.modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: end;
+}
+
+
+.column{
+    width: 30%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.kanban-board{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20PX;
+}
+
+/* #container{
+    width: 500px;
+    height: 500px;
+    background-color: pink;
+    margin: 20px;
+    padding: 20px;
+
+} */
