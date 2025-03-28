@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <title>ToDo em Dia</title>
 </head>
 
@@ -29,7 +30,7 @@
                 <select name="status">
                     <option value="Pendente">Pendente</option>
                     <option value="Em Andamento">Em Andamento</option>
-                    <option value="Conluido">Concluído</option>
+                    <option value="Concluido">Concluído</option>
                 </select>
                 <button type="submit" name="add" class="btn">Salvar</button>
             </form>
@@ -37,6 +38,7 @@
     </div>
 
     <div class="kanban-board">
+        <!-- <button onclick="console.log('oi, fui clicado')">teste</button> -->
         <div class="column">
             <h2>Pendente</h2>
 
@@ -69,7 +71,7 @@
             <div class="task-list">
                 <div class="task-card">
                     <div class="task-header">
-                        <?php renderizaTarefa("Conluido") ?>
+                        <?php renderizaTarefa("Concluido") ?>
                     </div>
                 </div>
             </div>
@@ -102,13 +104,35 @@
 
                             <form action='actions.php' method='POST' class='delete-form'>
                                 <input type='hidden' name='index' value='{$index}'>
-                                <button type='submit' name='delete' class='delete'>X</button>
+                                <button type='submit' name='delete' class='delete'>
+                                    <i class='bi bi-trash'></i>
+                                </button>
                             </form>
                             </div>
                             <p>{$tarefa['descricao']}</p>
                             <span class='data'>" .
                     date('d/m/Y', strtotime($tarefa['data']))
                     . "</span>
+                            <form action='actions.php' method='POST'>
+                                <input type='hidden' name='index' value='{$index}'>
+                                <select name='novo_status' onchange='this.form.submit()'>
+                                    <option value='Pendente'" .
+                    ($tarefa['status'] == "Pendente" ? "selected" : "") . "> 
+                                        Pendente
+                                    </option>
+                                    
+                                    <option value='Em Andamento'" .
+                    ($tarefa['status'] == "Em Andamento" ? "selected" : "") . ">
+                                        Em Andamento
+                                    </option>
+
+                                    <option value='Concluido'" .
+                    ($tarefa['status'] == "Concluido" ? "selected" : "") . ">
+                                        Concluído
+                                    </option>
+                                </select>
+                            </form>
+
                         </div>
                     </div>
                 ";

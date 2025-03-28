@@ -3,18 +3,42 @@
         "nome": "test1",
         "descricao": "descricao1",
         "data": "2025-03-14",
-        "status": "Pendente"
+        "status": "Concluido"
     },
     {
         "nome": "tarefas2",
         "descricao": "descricao 2",
         "data": "2025-03-12",
-        "status": "Pendente"
+        "status": "Concluido"
     },
     {
         "nome": "tarefa nova",
         "descricao": "tarefa nova",
         "data": "2025-03-18",
+        "status": "Pendente"
+    },
+    {
+        "nome": "Estudar",
+        "descricao": "L\u00f3gica",
+        "data": "2025-03-29",
+        "status": "Em Andamento"
+    },
+    {
+        "nome": "Estudar",
+        "descricao": "PHP",
+        "data": "2025-03-27",
+        "status": "Em Andamento"
+    },
+    {
+        "nome": "Estudar",
+        "descricao": "C#",
+        "data": "2025-03-26",
+        "status": "Concluido"
+    },
+    {
+        "nome": "Estudar",
+        "descricao": "rte",
+        "data": "2025-03-05",
         "status": "Pendente"
     }
 ]
